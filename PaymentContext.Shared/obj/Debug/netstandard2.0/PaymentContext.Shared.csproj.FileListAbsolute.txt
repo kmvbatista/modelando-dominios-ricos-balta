@@ -1,0 +1,8 @@
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/bin/Debug/netstandard2.0/PaymentContext.Shared.deps.json
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/bin/Debug/netstandard2.0/PaymentContext.Shared.dll
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/bin/Debug/netstandard2.0/PaymentContext.Shared.pdb
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/obj/Debug/netstandard2.0/PaymentContext.Shared.csprojAssemblyReference.cache
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/obj/Debug/netstandard2.0/PaymentContext.Shared.AssemblyInfoInputs.cache
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/obj/Debug/netstandard2.0/PaymentContext.Shared.AssemblyInfo.cs
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/obj/Debug/netstandard2.0/PaymentContext.Shared.dll
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Shared/obj/Debug/netstandard2.0/PaymentContext.Shared.pdb
