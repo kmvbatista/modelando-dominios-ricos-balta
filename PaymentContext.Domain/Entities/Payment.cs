@@ -1,33 +1,33 @@
 using System;
+using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
-namespace  PaymentContext.Domaint.Entities
+namespace  PaymentContext.Domain.Entities
 {
-  public abstract class Payment
+  public abstract class Payment : Entity
   {
-      public string Number { get; set; }
-      public DateTime PaidDate { get; set; }
-      public DateTime ExpireDate { get; set; }
-      public decimal Total { get; set; }
-      public decimal TotalPaid { get; set; }
-      public string Payer { get; set; }
-      public string Document { get; set; }
-      public string Email { get; set; }
-      public string Adress { get; set; }
-  }
+    protected Payment(string number, DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, string payer, Document document, Email email, string adress)
+    {
+      Number = Guid.NewGuid().ToString().Replace("-", "").Substring(10).ToUpper();
+      PaidDate = paidDate;
+      ExpireDate = expireDate;
+      Total = total;
+      TotalPaid = totalPaid;
+      Payer = payer;
+      Document = document;
+      Email = email;
+      Adress = adress;
+    }
 
-  public class BoletPayment
-  {
-      public string Barcode { get; set; }
-      public string BoletoNumber { get; set; }
+    public string Number { get; private set; }
+      public DateTime PaidDate { get; private  set; }
+      public DateTime ExpireDate { get;  private  set; }
+      public decimal Total { get; private  set; }
+      public decimal TotalPaid { get; private  set; }
+      public string Payer { get; private  set; }
+      public Document Document { get; private  set; }
+      public Email Email { get; private  set; }
+      public string Adress { get; private  set; }
   }
-  public class CreditCardPayment
-  {
-    public string CardHolderName { get; set; }
-    public string CardNumber { get; set; }
-    public string LastTransactionNumber { get; set; }
-  }
-  public class PayPalPayment
-  {
-    public string TriansactionCode { get; set; }
-  }
+  
 }
