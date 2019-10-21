@@ -33,11 +33,14 @@ namespace  PaymentContext.Domain.Entities
               break;
             }
           }
-          AddNotifications( 
+          AddNotifications(   
             new Contract()
             .Requires()
             .IsFalse(hasSubscriptions ,"Student.Subscriptions", "Você já tem uma assinatura ativa")
+            .IsGreaterThan(subscription.Payments.Count, 0, "Student.Subscription.Payments", 
+            "Essa assinatura não contém pagamentos")
           );
+          _subscriptions.Add(subscription);
         }
 
       // private void DeactivateSubscription(Subscription sub)

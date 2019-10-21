@@ -7,7 +7,7 @@ namespace  PaymentContext.Domain.Entities
 {
   public abstract class Payment : Entity
   {
-    protected Payment(string number, DateTime paidDate, DateTime expireDate, 
+    protected Payment (DateTime paidDate, DateTime expireDate, 
     decimal total, decimal totalPaid, string payer, Document document, Email email,
      Adress adress)
     {
@@ -23,7 +23,8 @@ namespace  PaymentContext.Domain.Entities
 
       AddNotifications( new Contract()
       .Requires()
-      .IsGreaterThan(0, Total, "Payment.Total", "O total não pode ser 0"));
+      .IsGreaterThan(Total, 0, "Payment.Total", "O total não pode ser 0")
+      .IsGreaterOrEqualsThan(TotalPaid, Total, "Payment.Total", "O total pago tem que ser maior ou igual"));
     }
 
     public string Number { get; private set; }

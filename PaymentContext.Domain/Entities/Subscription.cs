@@ -22,14 +22,15 @@ namespace  PaymentContext.Domain.Entities
       public DateTime LastUpdateDate { get;  private set; }
       public DateTime? ExpireDate { get;  private set; }
       public bool Active { get; private set; }
-      public IReadOnlyCollection<Payment> Payments { get; set; }
+      public IReadOnlyCollection<Payment> Payments { get {return _payments.ToArray();}}
 
       public void AddPayments(Payment payment) 
       {
         AddNotifications(new Contract()
                         .Requires()
                         .IsGreaterThan(DateTime.Now, payment.PaidDate, 
-                        "Subscription.Payment", "a data do pagamento deve ser no futuro"));
+                        "Subscription.Payment", "a data do pagamento deve ser no futuro")
+                        );
         _payments.Add(payment);
       }
       public void Activate() 

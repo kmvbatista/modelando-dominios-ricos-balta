@@ -94,3 +94,4 @@
 /home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Tests/bin/Debug/netcoreapp3.0/PaymentContext.Shared.dll
 /home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Tests/bin/Debug/netcoreapp3.0/PaymentContext.Shared.pdb
 /home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Tests/bin/Debug/netcoreapp3.0/PaymentContext.Domain.pdb
+/home/kmvbatista/DOTNET/paymentcontext/PaymentContext.Tests/bin/Debug/netcoreapp3.0/Flunt.dll
